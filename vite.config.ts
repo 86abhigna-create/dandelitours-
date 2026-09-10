@@ -11,7 +11,6 @@ function flatRepoFallbackPlugin() {
     resolveId(source: string, importer?: string) {
       if (!importer || importer.includes('node_modules')) return null;
 
-      // Automatically find ../types or ./types
       if (source.endsWith('/types') || source === '../types' || source === './types') {
         for (const candidate of [
           path.resolve(__dirname, 'types.ts'),
@@ -21,7 +20,6 @@ function flatRepoFallbackPlugin() {
         }
       }
 
-      // Automatically find mockData in root or data folder
       if (source.includes('mockData')) {
         for (const candidate of [
           path.resolve(__dirname, 'mockData.ts'),
@@ -33,7 +31,6 @@ function flatRepoFallbackPlugin() {
         }
       }
 
-      // Automatically find any component in root or components folder
       if (source.includes('components/')) {
         const componentName = source.split('components/').pop();
         if (componentName) {
