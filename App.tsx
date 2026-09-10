@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TabType, Stay, Activity, PackageItem, Booking, SearchParams } from './types';
-import { INITIAL_STAYS, INITIAL_ACTIVITIES, INITIAL_PACKAGES, INITIAL_BOOKINGS } from './data/mockData';
+import { INITIAL_STAYS, INITIAL_ACTIVITIES, INITIAL_PACKAGES, INITIAL_BOOKINGS } from './mockData';
 import { Header } from './components/Header';
 import { SearchSummaryBar } from './components/SearchSummaryBar';
 import { CategoryChips } from './components/CategoryChips';
