@@ -18,10 +18,8 @@ import { AboutView } from './AboutView';
 import { TourismGuideSection } from './TourismGuideSection';
 import { PackageBookingModal } from './PackageBookingModal';
 import { WeatherWidget } from './WeatherWidget';
-import { TestimonialsSection } from './components/TestimonialsSection';
-import { HomeQuickHighlights } from './components/HomeQuickHighlights';
-import heroBannerImage from './assets/images/dandeli_hero_banner_1788880366425.jpg';
-
+import { TestimonialsSection } from './TestimonialsSection';
+import { HomeQuickHighlights } from './HomeQuickHighlights';
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('explore');
   const [stays] = useState<Stay[]>(INITIAL_STAYS);
